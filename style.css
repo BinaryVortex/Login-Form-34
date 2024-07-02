@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+button:focus, input:focus, textarea:focus {
+	outline: 0;
+}
+
+body {
+	background: #181A1B;
+	color: #ffffff;
+	font-size: 16px;
+	line-height: 26px;
+	font-family: 'Poppins', sans-serif;
+	overflow: hidden;
+}
+
+.login_wrap {
+	width: 500px;
+	margin: 0 auto;
+	padding: 150px 0;
+	position: relative;
+}
+
+.login_wrap .ring {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login_wrap .ring i {
+	border: 2px solid #ffffff;
+	transition: .5s;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.login_wrap:hover .ring i:nth-child(1) {
+	border: 6px solid #9ed4fc;
+	filter: drop-shadow( 0 0 20px #9ED4FC);
+}
+
+.login_wrap .ring i:nth-child(1) {
+	border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+	animation: animate1 6s linear infinite;
+}
+
+.login_wrap:hover .ring i:nth-child(2) {
+	border: 6px solid #ff0057;
+	filter: drop-shadow( 0 0 20px #ff0057);
+}
+
+.login_wrap .ring i:nth-child(2) {
+	border-radius: 41% 44% 56% 59% / 38% 62% 63% 37%;
+	animation: animate1 6s linear infinite;
+}
+
+.login_wrap .ring i:nth-child(3) {
+	border-radius: 41% 44% 56% / 38% 62% 63% 37%;
+	animation: animate2 6s linear infinite;
+}
+
+.login_wrap:hover .ring i:nth-child(3) {
+	border: 6px solid #d081f7;
+	filter: drop-shadow( 0 0 20px #d081f7);
+}
+
+.login_wrap .login_box {
+	width: 300px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 11;
+}
+
+.login_wrap h2 {
+	font-size: 30px;
+	font-weight: 600;
+	text-align: center;
+	padding-bottom: 45px;
+}
+
+.login_wrap input {
+	width: 100%;
+	height: 50px;
+	border: 1px solid #ffffff;
+	padding-left: 15px;
+	color: #ffffff;
+	font-size: 15px;
+	font-weight: 500;
+	border-radius: 5px;
+	background: transparent;
+}
+
+.login_wrap input::Placeholder {
+	color: #ffffff;
+}
+
+.mt_20 {
+	margin-top: 20px;
+}
+
+.login_wrap button {
+	width: 100%;
+	height: 45px;
+	border: transparent;
+	background: linear-gradient(90deg, #9ED4FC 0.1%, #D081F7 98.06%);
+	cursor: pointer;
+	border-radius: 5px;
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: 500;
+	transition: .5s;
+}
+
+.login_wrap button:hover {
+	background: linear-gradient(90deg, #D081F7 0.1%, #9ED4FC 98.06%);
+}
+
+.login_wrap .custom_flex {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.login_wrap .custom_flex a {
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 15px;
+	transition: .3s;
+}
+
+.login_wrap .custom_flex a:hover {
+	text-decoration: underline;
+}
+
+
+@keyframes animate1 {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+
+@keyframes animate2 {
+	0% {
+		transform: rotate(360deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
